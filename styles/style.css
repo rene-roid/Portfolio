@@ -140,7 +140,7 @@ main {
     padding-left: 25px;
   }
 
-  .navbatToggle .bar {
+  .navbarToggle .bar {
     width:25px;
     height:3px;
     margin:5px auto;
@@ -149,7 +149,7 @@ main {
     background-color: #fff;
   }
 
-  .navbatToggle .bar{
+  .navbarToggle .bar{
     display: block;
 
     cursor: pointer;
