@@ -6,6 +6,7 @@
   padding: 0;
 
   font-family: 'Poppins', 'Roboto', 'Kumbh Sans', sans-serif;
+  scroll-behavior: smooth;
 }
 
 canvas {
@@ -156,11 +157,12 @@ main {
 
     transition: all 0.3s ease-in-out;
     background-color: #fff;
-  }
-
-  .navbarToggle .bar{
+    
     display: block;
-
+    cursor: pointer;
+  }
+  
+  .navbarToggle:hover {
     cursor: pointer;
   }
 
@@ -173,6 +175,11 @@ main {
     padding: 2rem;
     width: 100%;
     display: table;
+  }
+
+  .navbarLinks:hover {
+    filter: drop-shadow(0px 0px 20px #8E54E9);
+    transition: all 0.3s ease;
   }
 
   #mobile-menu{
