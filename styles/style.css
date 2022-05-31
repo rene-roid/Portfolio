@@ -15,9 +15,12 @@ canvas {
 }
 
 main {
-  position: absolute;
+  position: relative;
+  font-size: 2em;
+  color: white;
 }
 
+/* ---- NAVBAR ---- */
 .navbar {
   height: 80px;
   
@@ -96,7 +99,13 @@ main {
   transition: all 0.3s ease;
 }
 
+.highlight {
+  border-bottom: 4px solid #8E54E9;
+}
+
 @media screen and (max-width: 960px) {
+
+  /* ---- NAVBAR ---- */
   .navbarContainer {
     display: flex;
     justify-content: space-between;
