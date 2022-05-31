@@ -42,7 +42,7 @@ scene.add(gridHelper);
 function MoveCamera() {
     const t = document.body.getBoundingClientRect().top;
 
-    camera.position.z += t * -0.1;
+    camera.position.z = t * -0.1;
     camera.position.x = t * -0.01;
     camera.position.y = t * -0.1;
 }
