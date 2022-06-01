@@ -8,6 +8,7 @@ import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 // Scene
 const scene = new THREE.Scene();
 
+// Setting up camera
 // Camera values: fov, aspect, near, far
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
 camera.position.setZ(30);
@@ -35,18 +36,82 @@ scene.add(ambientLight);
 
 // Helpers
 // Grid helper: size, step, color
-const gridHelper = new THREE.GridHelper(200, 50);
-scene.add(gridHelper);
+// const gridHelper = new THREE.GridHelper(200, 50);
+// scene.add(gridHelper);
 
 // Move camera on scroll
+let lastT = 0;
 function MoveCamera() {
     const t = document.body.getBoundingClientRect().top;
 
-    camera.position.z = t * -0.1;
-    camera.position.x = t * -0.01;
-    camera.position.y = t * -0.1;
+    // On scroll up move camera up and and on scroll down move the camera down
+    // if (t > lastT) {
+    //     camera.position.y += (t - lastT) * 0.1;
+    // } else {
+    //     camera.position.y -= (lastT - t) * 0.1;
+    // }
+    
+    // On scroll move the camera arround the scene
+    camera.position.x += (t - lastT) * 0.1;
+    camera.position.z += (t - lastT) * 0.1;
+    
+
+
+    lastT = t;
+
+    // camera.position.z += (t * -0.001);
+    // camera.position.x += (t * -0.0001);
+    // camera.position.y += (t * -0.001);
 }
 document.body.onscroll = MoveCamera;
+
+// Instantiate 200 circles with random positions
+let circles = [];
+const stars = function() {
+    const geometry = new THREE.SphereGeometry(1, 32, 32);
+    const material = new THREE.MeshBasicMaterial({ color: 0xffffff });
+
+    for (let i = 0; i < 1000; i++) {
+        const sphere = new THREE.Mesh(geometry, material);
+
+        sphere.position.x = Math.random() * 500 - 250;
+        sphere.position.y = Math.random() * 500 - 250;
+        sphere.position.z = Math.random() * 500 - 250;
+
+        circles.push(sphere);
+
+        scene.add(sphere);
+    }
+}
+
+function MoveStars() {
+    // Move the stars to a randomm direction
+    // for (let i = 0; i < circles.length; i++) {
+    //     circles[i].position.x += (Math.random() * .1) * (Math.round(Math.random()) ? 1 : -1);
+    //     circles[i].position.y += (Math.random() * .1) * (Math.round(Math.random()) ? 1 : -1);
+    //     circles[i].position.z += (Math.random() * .1) * (Math.round(Math.random()) ? 1 : -1);
+    // }
+
+    // If the stars are out of the scene, move them back to a random position inside the scene
+    for (let i = 0; i < circles.length; i++) {
+        if (circles[i].position.x > 250 || circles[i].position.x < -250) {
+            circles[i].position.x = Math.random() * 500 - 250;
+        }
+        if (circles[i].position.y > 250 || circles[i].position.y < -250) {
+            circles[i].position.y = Math.random() * 500 - 250;
+        }
+        if (circles[i].position.z > 250 || circles[i].position.z < -250) {
+            circles[i].position.z = Math.random() * 500 - 250;
+        }
+    }
+
+    
+    for (let i = 0; i < circles.length; i++) {
+        circles[i].position.x += 0.;
+        circles[i].position.y += 0.;
+        circles[i].position.z += 1.2;
+    }
+}
 
 // Objects
 const geometry = new THREE.TorusBufferGeometry(10, 3, 16, 100); // Creating geometry
@@ -55,8 +120,12 @@ const torus = new THREE.Mesh(geometry, material); // Creating mesh
 
 scene.add(torus); // Adding mesh to scene
 
+function OnStart() {
+    stars();
+}
 
 function OnUpdate() {
+    MoveStars();
 
     // Rotating the torus
     torus.rotation.x += 0.01;
@@ -67,7 +136,8 @@ function OnUpdate() {
 let start = true;
 
 function Start() {
-    requestAnimationFrame(Start);
+    OnStart();
+
     renderer.render(scene, camera);
 }
 
@@ -77,7 +147,6 @@ function Update() {
     
     OnUpdate();
     
-    //console.log(`Update: ${updates++}`);
     renderer.render(scene, camera);
 }
 
