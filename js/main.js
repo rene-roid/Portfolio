@@ -4,6 +4,9 @@ import '../styles/style.css'
 import * as THREE from 'three'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 
+// Varibles
+const clock = new THREE.Clock();
+
 // Setting up scene
 // Scene
 const scene = new THREE.Scene();
@@ -43,25 +46,12 @@ scene.add(ambientLight);
 let lastT = 0;
 function MoveCamera() {
     const t = document.body.getBoundingClientRect().top;
-
-    // On scroll up move camera up and and on scroll down move the camera down
-    // if (t > lastT) {
-    //     camera.position.y += (t - lastT) * 0.1;
-    // } else {
-    //     camera.position.y -= (lastT - t) * 0.1;
-    // }
     
     // On scroll move the camera arround the scene
     camera.position.x += (t - lastT) * 0.1;
-    camera.position.z += (t - lastT) * 0.1;
-    
-
+    camera.position.z += (t - lastT) * 0.1 ;
 
     lastT = t;
-
-    // camera.position.z += (t * -0.001);
-    // camera.position.x += (t * -0.0001);
-    // camera.position.y += (t * -0.001);
 }
 document.body.onscroll = MoveCamera;
 
@@ -85,6 +75,8 @@ const stars = function() {
 }
 
 function MoveStars() {
+    // Get time between frames
+    const delta = clock.getDelta();
     // Move the stars to a randomm direction
     // for (let i = 0; i < circles.length; i++) {
     //     circles[i].position.x += (Math.random() * .1) * (Math.round(Math.random()) ? 1 : -1);
@@ -107,9 +99,9 @@ function MoveStars() {
 
     
     for (let i = 0; i < circles.length; i++) {
-        circles[i].position.x += 0.;
-        circles[i].position.y += 0.;
-        circles[i].position.z += 1.2;
+        // circles[i].position.x += 0.;
+        // circles[i].position.y += 0.;
+        circles[i].position.z += 5 * delta;
     }
 }
 
