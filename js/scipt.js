@@ -9,7 +9,6 @@ const mobileMenu = () => {
     menuLinks.classList.toggle('active');
 }
 menu.addEventListener('click', mobileMenu);
-navbarLinks.addEventListener('click', mobileMenu);
 
 // Show active menu when scrolling
 const highlightMenu = () => {
