@@ -1,6 +1,7 @@
 const menu = document.querySelector('#mobile-menu');
 const menuLinks = document.querySelector('.navbarMenu');
 const navLogo = document.querySelector('#navbar-logo');
+const navbarLinks = document.querySelectorAll('.navbarLinks');
 
 // Display mobile menu
 const mobileMenu = () => {
@@ -8,6 +9,7 @@ const mobileMenu = () => {
     menuLinks.classList.toggle('active');
 }
 menu.addEventListener('click', mobileMenu);
+navbarLinks.addEventListener('click', mobileMenu);
 
 // Show active menu when scrolling
 const highlightMenu = () => {
