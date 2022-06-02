@@ -150,8 +150,8 @@ function MoveParticles() {
     
     particlesMesh.rotation.y = -.1 * delta;
     if (mouseX != 0) {
-    particlesMesh.rotation.x = -(mouseY * 0.001) * delta;
-    particlesMesh.rotation.y = (mouseX * 0.001) * delta;
+    particlesMesh.rotation.x = -(mouseY * 0.001);
+    particlesMesh.rotation.y = (mouseX * 0.001);
     }
     
     lastMouseX = mouseX;
