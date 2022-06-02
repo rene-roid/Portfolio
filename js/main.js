@@ -132,11 +132,11 @@ function RotateTorus() {
 const particlesGeo = new THREE.BufferGeometry();
 const particlesMat = new THREE.PointsMaterial({ color: 0xffffff, size: 0.005 });
 
-const particleCount = 5000;
+const particleCount = 10000;
 const posArray = new Float32Array(particleCount * 3);
 
 for (let i = 0; i < particleCount; i++) {
-    posArray[i] = Math.random() * 500 - 250;
+    posArray[i] = (Math.random() * 500 - 250) * 2;
 }
 
 particlesGeo.setAttribute('position', new THREE.BufferAttribute(posArray, 3));
@@ -147,13 +147,15 @@ function MoveParticles() {
     const delta = clock.getElapsedTime();
 
     // If mouseX is not moving move the particles
-    
     particlesMesh.rotation.y = -.1 * delta;
-    if (mouseX != 0) {
-    particlesMesh.rotation.x = -(mouseY * 0.001);
-    particlesMesh.rotation.y = (mouseX * 0.001);
+    document.onmousemove = function() {
+        particlesMesh.rotation.x = -(mouseY * 0.001);
+        particlesMesh.rotation.y = (mouseX * 0.001);
     }
+
     
+    // particlesMesh.rotation.x = -(mouseY * 0.001);
+    // particlesMesh.rotation.y = (mouseX * 0.001) * delta;    
     lastMouseX = mouseX;
 }
 
