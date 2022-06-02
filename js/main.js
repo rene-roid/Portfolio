@@ -55,6 +55,15 @@ function MoveCamera() {
 }
 document.body.onscroll = MoveCamera;
 
+// Mouse
+document.addEventListener('mousemove', animateParticles)
+let mouseX = 0;
+let mouseY = 0;
+function animateParticles(event) {
+    mouseX = (event.clientX - window.innerWidth / 2) / 2;
+    mouseY = (event.clientY - window.innerHeight / 2) / 2;
+}
+
 // Instantiate 200 circles with random positions
 let circles = [];
 const stars = function() {
@@ -106,22 +115,59 @@ function MoveStars() {
 }
 
 // Objects
-const geometry = new THREE.TorusBufferGeometry(10, 3, 16, 100); // Creating geometry
-const material = new THREE.MeshStandardMaterial({ color: 0xffffff, wireframe: true }); // Creating material
-const torus = new THREE.Mesh(geometry, material); // Creating mesh
+const torusGeo = new THREE.TorusBufferGeometry(10, 3, 16, 100); // Creating geometry
+const torusMat = new THREE.MeshStandardMaterial({ color: 0xffffff, wireframe: true }); // Creating material
+// const torusMat = new THREE.PointsMaterial({ color: 0xffffff, size: 0.005 }); // Creating material
+const torus = new THREE.Mesh(torusGeo, torusMat); // Creating mesh
+// const torus = new THREE.Points(torusGeo, torusMat); // Creating mesh
+
+function RotateTorus() {
+    const delta = clock.getDelta();
+    // Rotating the torus
+    torus.rotation.x += 0.005;
+    torus.rotation.y += 0.005;
+    // torus.rotation.z += 100;
+}
+
+const particlesGeo = new THREE.BufferGeometry();
+const particlesMat = new THREE.PointsMaterial({ color: 0xffffff, size: 0.005 });
+
+const particleCount = 5000;
+const posArray = new Float32Array(particleCount * 3);
+
+for (let i = 0; i < particleCount; i++) {
+    posArray[i] = Math.random() * 500 - 250;
+}
+
+particlesGeo.setAttribute('position', new THREE.BufferAttribute(posArray, 3));
+const particlesMesh = new THREE.Points(particlesGeo, particlesMat);
+
+let lastMouseX = 0;
+function MoveParticles() {
+    const delta = clock.getElapsedTime();
+
+    // If mouseX is not moving move the particles
+    
+    particlesMesh.rotation.y = -.1 * delta;
+    if (mouseX != 0) {
+    particlesMesh.rotation.x = -(mouseY * 0.001) * delta;
+    particlesMesh.rotation.y = (mouseX * 0.001) * delta;
+    }
+    
+    lastMouseX = mouseX;
+}
 
 scene.add(torus); // Adding mesh to scene
+scene.add(particlesMesh);
 
 function OnStart() {
-    stars();
+    //stars();
 }
 
 function OnUpdate() {
-    MoveStars();
-
-    // Rotating the torus
-    torus.rotation.x += 0.01;
-    torus.rotation.y += 0.01;
+    //MoveStars();
+    RotateTorus();
+    MoveParticles();
 }
 
 // UNITY LIKE FUNCTIONS
