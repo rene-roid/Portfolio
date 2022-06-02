@@ -9,6 +9,10 @@
   scroll-behavior: smooth;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 canvas {
   position: fixed;
   top: 0;
@@ -110,7 +114,7 @@ main {
   /* background-size: 100%; */
 
   height: 100vh;
-  width: 100vw;
+  /* width: 100vw; */
 }
 
 .homeContent {
@@ -180,7 +184,36 @@ main {
   background-size: 100%;
 
   height: 100vh;
-  width: 100vw;
+  /* width: 100vw; */
+  padding-top: 10vh;
+
+  display: flex;
+}
+
+.aboutLeftSide {
+  margin-left: 2em;
+  width: 70%;
+  height: 100%;
+
+  left: 0;
+  
+
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+
+  /* Change space between lines */
+  /* line-height: 1em; */
+}
+
+.aboutTitle {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  font-size: 5rem;
+  font-weight: bold;
+  color: #fff;
 }
 
 .aboutContent {
@@ -188,15 +221,29 @@ main {
   position: relative;
   display: flex;
   flex-direction: column;
-
-  width: 50%;
+  justify-content: center;
   
+  /* Center the content */
   padding-right: 2em;
-  font-size: 1.5rem;
+  font-size: 2rem;
+}
+
+.aboutQuestion {
+
+  font-weight: bold;
+
+  background: #fd746c;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #ff9068, #fd746c);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #ff9068, #fd746c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
 }
 
 .aboutCoolWords {
-  font-weight: bold;
+  font-weight: 600;
   color: #fff;
 
   /* Add gradient to the text */
@@ -209,7 +256,45 @@ main {
   -moz-background-clip: text;
   -webkit-text-fill-color: transparent;
   -moz-text-fill-color: transparent;
+}
 
+.auto-type {
+  font-weight: 900;
+  color: #fff;
+
+  background: #FFB75E;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #ED8F03, #FFB75E);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #ED8F03, #FFB75E); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+.aboutRightSide {
+  width: 50%;
+  height: 100%;
+
+  right: 0;
+  padding-right: 2em;
+/* 
+  background-color: #47e64a; */
+}
+
+.aboutRightImage {
+  display: block;
+  
+  /* Square in the center that occupies 50% of the box */
+  width: 80%;
+  height: 70%; 
+  
+  margin-top: 10%;
+  margin-left: 10%;
+  margin-right: 30%;
+  /* transform: translate(-50%, -50%); */
+
+  background-image: linear-gradient(to top, #4776E6 0%, #8E54E9 100%);
 }
 
 /* My projects */
@@ -218,7 +303,7 @@ main {
   background-size: 100%;
 
   height: 100vh;
-  width: 100vw;
+  /* width: 100vw; */
 }
 
 /* Contact */
@@ -227,7 +312,7 @@ main {
   background-size: 100%;
 
   height: 100vh;
-  width: 100vw;
+  width: 100%;
 }
 
 @media screen and (max-width: 960px) {
@@ -337,9 +422,20 @@ main {
 
   }
 
+  /* About */
+  #about {
+    height: auto;
+  }
 
   .aboutContent {
     width: 100%;
   }
 
+  .aboutLeftSide {
+    width: 100%;
+  }
+
+  .aboutRightSide {
+    display: none;
+  }
 }
