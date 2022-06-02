@@ -211,6 +211,15 @@ main {
   display: flex;
   flex-direction: column;
 
+  background: #76b852;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #8DC26F, #76b852);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #8DC26F, #76b852); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+
   font-size: 5rem;
   font-weight: bold;
   color: #fff;
@@ -353,7 +362,7 @@ main {
   transition: 00.3s ease-in;
 }
 
-.projectsCard:nth-child(2) {
+/* .projectsCard:nth-child(2) {
   background-image: linear-gradient(to top, #47e694 0%, #e95477 100%);
 }
 
@@ -363,7 +372,7 @@ main {
 
 .projectsCard:nth-child(4) {
   background-image: linear-gradient(to top, #e647e1 0%, #54e954 100%);
-}
+} */
 
 .projectsCard h2 {
   text-align: center;
@@ -371,6 +380,8 @@ main {
 }
 
 .projectsCard p {
+  margin-right: 16px;
+  margin-left: 16px;
   text-align: center;
   margin-top: 24px;
   font-size: 20px;
@@ -378,16 +389,29 @@ main {
 
 .projectsCard button {
   color: #fff;
-  padding: 14px, 24px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  padding-right: 24px;
+  padding-left: 24px;
   outline: none;
   border: none;
   border-radius: 4px;
   background: #e647b4;  /* fallback for old browsers */
   font-size: 1rem;
+  text-decoration-color: rgba(255, 255, 255, 0);
+
+  transition: 0.3s ease-in;
+
 }
 
 .projectsCard button:hover {
   cursor: pointer;
+  /* Underline text */
+  text-decoration: underline;
+  text-decoration-color: rgba(255, 255, 255, 1);
+  transform: scale(1.075);
+  transition: 0.3 ease-in;
+  background: #ff2cbc;
 }
 
 .projectsCard:hover {
@@ -399,6 +423,7 @@ main {
 .projectsBtn{
   display: flex;
   justify-content: center;
+  
   margin-top: 16px;
 }
 
