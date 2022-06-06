@@ -147,10 +147,10 @@ function MoveParticles() {
     const delta = clock.getElapsedTime();
 
     // If mouseX is not moving move the particles
-    particlesMesh.rotation.y = -.1 * delta;
+    // particlesMesh.rotation.y = -.1 * delta;
+    particlesMesh.rotation.x = -(mouseY * 0.001);
+    particlesMesh.rotation.y = (mouseX * 0.0005) + -.1 * delta;
     document.onmousemove = function() {
-        particlesMesh.rotation.x = -(mouseY * 0.001);
-        particlesMesh.rotation.y = (mouseX * 0.001);
     }
 
     
@@ -186,7 +186,7 @@ function Update() {
     requestAnimationFrame(Update);
     
     OnUpdate();
-    
+    updates++;
     renderer.render(scene, camera);
 }
 
