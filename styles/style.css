@@ -28,7 +28,7 @@ main {
 /* ---- NAVBAR ---- */
 .navbar {
   height: 80px;
-  
+
   background-color: #131313;
 
   position: sticky;
@@ -38,7 +38,7 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  
+
   font-size: 1.2rem;
 }
 
@@ -138,9 +138,12 @@ main {
 
 .homeTitleName {
   /* Side gradient */
-  background: #f857a6;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #ff5858, #f857a6);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #ff5858, #f857a6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #f857a6;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #ff5858, #f857a6);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #ff5858, #f857a6);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
   background-size: 100%;
 
@@ -159,8 +162,10 @@ main {
   font-size: 2rem;
   font-weight: 700;
 
-  background: -webkit-linear-gradient(to right, #ff5858, #f857a6);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #ff5858, #f857a6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: -webkit-linear-gradient(to right, #ff5858, #f857a6);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #ff5858, #f857a6);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
   padding: 1rem 2rem;
   margin-top: 5rem;
@@ -173,9 +178,15 @@ main {
   outline: none;
   text-decoration: none;
 
-  z-index: 2;;
+  z-index: 2;
+  ;
 
   cursor: pointer;
+}
+
+.homeButton:hover {
+  transform: scale(1.075);
+  transition: 0.3 ease-in;
 }
 
 /* About me */
@@ -196,7 +207,7 @@ main {
   height: 100%;
 
   left: 0;
-  
+
 
   text-align: center;
   justify-content: center;
@@ -211,9 +222,12 @@ main {
   display: flex;
   flex-direction: column;
 
-  background: #76b852;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #8DC26F, #76b852);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #8DC26F, #76b852); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #76b852;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #8DC26F, #76b852);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #8DC26F, #76b852);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
   -webkit-background-clip: text;
   -moz-background-clip: text;
@@ -231,7 +245,7 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  
+
   /* Center the content */
   padding-right: 2em;
   font-size: 2rem;
@@ -241,9 +255,12 @@ main {
 
   font-weight: bold;
 
-  background: #fd746c;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #ff9068, #fd746c);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #ff9068, #fd746c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #fd746c;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #ff9068, #fd746c);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #ff9068, #fd746c);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
   -webkit-background-clip: text;
   -moz-background-clip: text;
@@ -256,11 +273,14 @@ main {
   color: #fff;
 
   /* Add gradient to the text */
-  background: #f857a6;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #ff5858, #f857a6);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #ff5858, #f857a6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #f857a6;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #ff5858, #f857a6);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #ff5858, #f857a6);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   background-size: 100%;
-  
+
   -webkit-background-clip: text;
   -moz-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -271,9 +291,12 @@ main {
   font-weight: 900;
   color: #fff;
 
-  background: #FFB75E;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #ED8F03, #FFB75E);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #ED8F03, #FFB75E); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #FFB75E;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #ED8F03, #FFB75E);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #ED8F03, #FFB75E);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
   -webkit-background-clip: text;
   -moz-background-clip: text;
@@ -287,17 +310,17 @@ main {
 
   right: 0;
   padding-right: 2em;
-/* 
+  /* 
   background-color: #47e64a; */
 }
 
 .aboutRightImage {
   display: block;
-  
+
   /* Square in the center that occupies 50% of the box */
   width: 80%;
-  height: 70%; 
-  
+  height: 70%;
+
   margin-top: 10%;
   margin-left: 10%;
   margin-right: 30%;
@@ -323,9 +346,12 @@ main {
 }
 
 .projects h1 {
-  background: #FFB75E;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #ED8F03, #FFB75E);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #ED8F03, #FFB75E); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #FFB75E;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #ED8F03, #FFB75E);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #ED8F03, #FFB75E);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   background-size: 100%;
 
   font-size: 2.5em;
@@ -396,7 +422,8 @@ main {
   outline: none;
   border: none;
   border-radius: 4px;
-  background: #e647b4;  /* fallback for old browsers */
+  background: #e647b4;
+  /* fallback for old browsers */
   font-size: 1rem;
   text-decoration-color: rgba(255, 255, 255, 0);
 
@@ -420,11 +447,20 @@ main {
   cursor: pointer;
 }
 
-.projectsBtn{
+.projectsBtn {
   display: flex;
   justify-content: center;
-  
+
   margin-top: 16px;
+}
+
+.projectsBtn a, .aNoStyle {
+  text-decoration: none;
+  color: #fff;
+}
+
+.aNoStyle:active {
+  color: #fff;
 }
 
 /* Contact */
@@ -436,6 +472,80 @@ main {
   width: 100%;
 }
 
+/* Footer */
+.footerContainer {
+  /* background-color: #131313; */
+  padding: 5rem 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 1.3rem;
+}
+
+.footerLinks {
+  width: 100%;
+  max-width: 1000px;
+  display: flex;
+  justify-content: center;
+}
+
+.footerLinkWrapper {
+  display: flex;
+}
+
+.footerLinkItems {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+
+  margin: 16px;
+  width: 260px;
+
+  box-sizing: border-box;
+}
+
+.footerLinkItems a {
+  color: #fff;
+  text-decoration: underline;
+  font-size: 1.2rem;
+}
+
+#footerLogo {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 2rem;
+}
+
+.socialIcons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 16px;
+}
+
+.socialMedia {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.socialIconsLinks {
+  color: #fff;
+}
+
+.websiteRights {
+  color: #fff;
+  font-size: 1.2rem;
+  margin-top: 16px;
+}
 @media screen and (max-width: 1300px) {
 
   /* ---- NAVBAR ---- */
@@ -456,7 +566,7 @@ main {
     display: grid;
     position: absolute;
     grid-template-columns: auto;
-    
+
     margin: 0;
     top: -1000px;
     width: 100%;
@@ -468,11 +578,11 @@ main {
   }
 
   .navbarMenu.active {
-    background:#131313;
+    background: #131313;
     top: 100%;
     height: 60vh;
     font-size: 1.6rem;
-    
+
     transition: all 0.5s ease;
     opacity: 1;
     z-index: 99;
@@ -483,17 +593,17 @@ main {
   }
 
   .navbarToggle .bar {
-    width:25px;
-    height:3px;
-    margin:5px auto;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
 
     transition: all 0.3s ease-in-out;
     background-color: #fff;
-    
+
     display: block;
     cursor: pointer;
   }
-  
+
   .navbarToggle:hover {
     cursor: pointer;
   }
@@ -514,7 +624,7 @@ main {
     transition: all 0.3s ease;
   }
 
-  #mobile-menu{
+  #mobile-menu {
     position: absolute;
     top: 20%;
     right: 5%;
@@ -569,24 +679,25 @@ main {
 @media screen and (max-width: 768px) {
 
   /* Home */
-.homeContent {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  font-size: auto;
-}
-.homeTitle, .homeTitleName {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  font-size: auto;
-  font-size: 3rem;
-}
+  .homeContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: auto;
+  }
 
-    /* Projects */
-    .projectsWrapper {
-      grid-template-columns: 1fr;
-    }
+  .homeTitle, .homeTitleName {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: auto;
+    font-size: 3rem;
+  }
+
+  /* Projects */
+  .projectsWrapper {
+    grid-template-columns: 1fr;
+  }
 }
