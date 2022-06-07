@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="../image/svg+xml" href="../../favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fernando's Portfolio</title>
+</head>
+
+<body>
+  <canvas id="bg"></canvas>
+
+  <!-- Navbar Section -->
+  <nav class="navbar">
+    <div class="navbarContainer">
+      <a href="#home" id="navbar-logo">Fernando</a>
+      <div class="navbarToggle" id="mobile-menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+      <ul class="navbarMenu" id="navbarMenu">
+        <li class="navbarItem"><a class="navbarLinks" id="home-page" href="#home">Inicio</a></li>
+        <li class="navbarItem"><a class="navbarLinks" id="about-page" href="#about">Sobre mí</a></li>
+        <li class="navbarItem"><a class="navbarLinks" id="projects-page" href="#projects">Proyectos</a></li>
+        <li class="navbarItem"><a class="navbarLinks" id="contact-page" href="#contact">Contacto</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <!-- Home Section -->
+    <section id="home">
+      <div class="homeContainer">
+        <div class="homeContent">
+          <h1 class="homeTitle">Hola, soy <a class="homeTitleName">Fernando!</a></h1>
+          <h3 class="homeSubtitle">Bienvenido a mi página web!</h3>
+          <p class="homeSubtitle">Soy un desarrollador web y de software <b>Junior</b>.</p><br>
+          <a class="homeButton" href="#about">Descubre más</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- About me -->
+    <section id="about">
+      <br><br>
+      <div class="aboutLeftSide">
+        <h2 class="aboutTitle"><u>Sobre mí</u></h2> <br>
+        <div class="aboutContent">
+          <p>
+            <b class="aboutQuestion">Donde estoy?</b>
+            <!-- I'm a junior software developer --> Estoy basado en Barcelona y
+            actualmente estoy estudiando desarrollo de <span class="aboutCoolWords">software</span> y de <span class="aboutCoolWords">videojuegos</span>.
+          </p><br>
+          <p>
+            <span class="aboutQuestion">Qué sé hacer?</span> <br>
+            Actualmente estoy aprendiendo <span class="auto-type"></span>
+          </p><br>
+          <p>
+            Disfruto creando cosas, ya sean sitios web, aplicaciones móviles, videojuegos o cualquier otra cosa.
+            Mi objetivo es siempre crear cosas que sean útiles y fáciles de usar, al mismo tiempo que me esfuerzo por aprender nuevas habilidades todos los días.
+            Soy un apasionado de la programación y siempre estoy buscando aprender cosas nuevas.
+          </p>
+        </div>
+      </div>
+      <div class="aboutRightSide"><br>
+        <div class="aboutRightImage">
+        </div>
+      </div>
+    </section>
+
+    <!-- My projects -->
+    <section class="projects" id="projects" style="margin-top: 0;">
+      <h1>Mis proyectos</h1>
+      <p>Hey! ¡Echa un vistazo rápido a mis proyectos más recientes!</p>
+      <div class="projectsWrapper">
+        <div class="projectsCard">
+          <h2>Portafolio</h2>
+          <p>Haciendo este portafolio</p>
+          <!-- <div class="projectsBtn"><button>Learn more!</button></div> -->
+        </div>
+        <div class="projectsCard"> <a class="aNoStyle" href="./pages/project.html" target="_blank">
+            <h2>Burga Burgha Zoen</h2>
+            <p>Juego de ritmo</p>
+            <!-- <div class="projectsBtn"><button>Learn more!</button></div> -->
+          </a>
+        </div>
+        <div class="projectsCard">
+          <h2>Jeff Parqür</h2>
+          <p>Mi primer juego 3D</p>
+          <!-- <div class="projectsBtn"><button>Learn more!</button></div> -->
+        </div>
+        <div class="projectsCard">
+          <h2>Cosmic aliance</h2>
+          <p>Bullet hell en 2D</p>
+          <!-- <div class="projectsBtn"><button>Learn more!</button></div> -->
+        </div>
+      </div>
+      <a class="homeButton" href="./pages/projects.html">Todos mis proyectos!</a>
+
+    </section>
+
+    <!-- Contact -->
+    <!-- <section id="contact">
+        <h2>Contact</h2>
+        <div class="contactContainer">
+          <div class="contactContent">
+            <p>
+              If you want to contact me, you can find me on <a href="https://www.linkedin.com/in/fsolorzanopdp/">LinkedIn</a>
+              or <a href="https://github.com/rene-roid"> GitHub</a>.
+            </p>
+          </div>
+        </div>
+      </section> -->
+
+    <section class="footer">
+      <div class="footerContainer">
+        <div class="footerLinks">
+          <div class="footerLinkWrapper">
+            <div class="footerLinkItems">
+              <h2>Inicio</h2>
+              <a href="#">Inicio</a>
+              <a href="#">Sobre mí</a>
+              <a href="#">Mis proyectos</a>
+              <a href="#">Contacto</a>
+            </div>
+            <div class="footerLinkItems">
+              <h2>Redes sociales</h2>
+              <a href="https://www.linkedin.com/in/fsolorzanopdp/" target="_blank">LinkedIn</a>
+              <a href="https://github.com/rene-roid" target="_blank">GitHub</a>
+              <a href="#">Correo eletrónico</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <section class="socialMedia">
+        <div class="socialMediaWrap">
+          <p class="websiteRights">© FERNANDO 2022. All rights reserved</p>
+          <div class="socialIcons">
+            <a href="https://www.linkedin.com/in/fsolorzanopdp/" class="socialIconsLinks" target="_blank">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            &nbsp; &nbsp;
+            <a href="https://github.com/rene-roid" class="socialIconsLinks" target="_blank">
+              <i class="fab fa-github"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+    </section>
+
+  </main>
+
+  <script src="https://kit.fontawesome.com/ef97864b89.js" crossorigin="anonymous"></script>
+  <script src="../js/scipt.js"></script>
+  <script type="module" src="../js/main.js"></script>
+
+  <!-- Autotype -->
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script>
+    var typed = new Typed(".auto-type", {
+      strings: ["JavaScript.", "HTML.", "CSS.", "PHP.", "Unity.", "C#", "C++.", "Java."],
+      typeSpeed: 150,
+      backSpeed: 150,
+      loop: true
+    });
+  </script>
+
+  <script type="text/javascript">
+    // Detect if browser is in Spanish
+    var lang = navigator.language || navigator.userLanguage;
+    if (lang.includes("en")) {
+      // Redirect to Spanish version
+      // window.location.replace("http://127.0.0.1:3000/index.html");
+    }
+  </script>
+
+</body>
+
+</html>
