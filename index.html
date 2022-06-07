@@ -83,10 +83,10 @@
           <!-- <div class="projectsBtn"><button>Learn more!</button></div> -->
         </div>
         <div class="projectsCard"> <a class="aNoStyle" href="./pages/project.html" target="_blank">
-          <h2>Burga Burgha Zoen</h2>
-          <p>Rythm game</p>
-          <!-- <div class="projectsBtn"><button>Learn more!</button></div> -->
-        </a>
+            <h2>Burga Burgha Zoen</h2>
+            <p>Rythm game</p>
+            <!-- <div class="projectsBtn"><button>Learn more!</button></div> -->
+          </a>
         </div>
         <div class="projectsCard">
           <h2>Jeff Parqür</h2>
@@ -196,6 +196,16 @@
       loop: true
     });
   </script>
+
+  <script type="text/javascript">
+    // Detect if browser is in Spanish
+    var lang = navigator.language || navigator.userLanguage;
+    if (lang.includes("es")) {
+      // Redirect to Spanish version
+      window.location.replace("http://127.0.0.1:3000/es-ES/index.html");
+    }
+  </script>
+
 </body>
 
 </html>
