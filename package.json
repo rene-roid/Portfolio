@@ -7,7 +7,7 @@
     "build": "vite build",
     "preview": "vite preview",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "deploy": "gh-pages vite -d dist"
+    "deploy": "gh-pages vite build -d dist"
   },
   "devDependencies": {
     "vite": "^2.9.9"
