@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/style.css" />
+    <title>My projects!</title>
+</head>
+
+<body>
+    <canvas id="bg"></canvas>
+    <main>
+        <!-- Navbar Section -->
+        <nav class="navbar">
+            <div class="navbarContainer">
+                <a href="../index.html" id="navbar-logo">Fernando</a>
+                <div class="navbarToggle" id="mobile-menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+                <ul class="navbarMenu" id="navbarMenu">
+                    <li class="navbarItem"><a class="navbarLinks" id="home-page" href="../index.html">Home</a></li>
+                    <!-- <li class="navbarItem"><a class="navbarLinks" id="about-page" href="#about">About me</a></li> -->
+                    <li class="navbarItem"><a class="navbarLinks" id="projects-page" href="#">Projects</a>
+                    </li>
+                    <li class="navbarItem"><a class="navbarLinks" id="contact-page" href="#">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- My projects -->
+
+
+        <section id="home">
+            <div class="homeContainer">
+                <div class="homeContent">
+                    <section class="projects" id="projects">
+                        <h1>Work in progress<span class="auto-type"></span> </h1>
+                        <a class="homeButton" href="../index.html">Return to home</a>
+                    </section>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+
+    <script type="module" src="../js/main.js"></script>
+    <script>
+        const menu = document.querySelector('#mobile-menu');
+        const menuLinks = document.querySelector('.navbarMenu');
+
+        // Display mobile menu
+        const mobileMenu = () => {
+            menu.classList.toggle('is-active');
+            menuLinks.classList.toggle('active');
+        }
+        menu.addEventListener('click', mobileMenu);
+    </script>
+
+<script type="text/javascript">
+    // Detect if browser is in Spanish
+    var lang = navigator.language || navigator.userLanguage;
+    if (lang.includes("es")) {
+        // Redirect to Spanish version
+        // window.location.replace("https://rene-roid.github.io/Portfolio/es-ES/projects.html");
+    }
+    </script>
+
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script>
+        var typed = new Typed(".auto-type", {
+            strings: ["..."],
+            typeSpeed: 150,
+            backSpeed: 150,
+            loop: true,
+            cursorChar: '',
+        });
+    </script>
+
+</body>
+
+</html>
