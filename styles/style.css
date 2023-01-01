@@ -361,6 +361,8 @@ main {
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   background-size: 100%;
 
+  padding-bottom: 2rem;
+
   font-size: 2.5em;
 
   -webkit-background-clip: text;
@@ -372,6 +374,8 @@ main {
 
 .projects p {
   margin-bottom: 5rem;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 .projectsWrapper {
@@ -696,6 +700,10 @@ main {
     height: auto;
   }
 
+  .aboutTitle {
+    padding-top: 10rem;
+  }
+
   .aboutContent {
     width: 100%;
   }
@@ -711,6 +719,17 @@ main {
   /* Projects */
   .projectsWrapper {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .projects h1 {
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+  }
+
+  .projects p {
+    padding: 1rem 0;
+    margin-left: 10%;
+    margin-right: 10%;
   }
 }
 
@@ -731,10 +750,28 @@ main {
     justify-content: center;
     align-items: center;
     font-size: auto;
-    font-size: 3rem;
+    font-size: 5rem;
+  }
+
+  .homeSubtitle {
+    padding-top: 2rem;
+    padding-left: 10%;
+    padding-right: 10%;
+    text-align: center;
+  }
+
+  /* About */
+  .aboutTitle {
+    padding-top: 20rem;
+    text-align: center;
   }
 
   /* Projects */
+  .projects p {
+    /* Align text to the center */
+    text-align: center;
+  }
+
   .projectsWrapper {
     grid-template-columns: 1fr;
   }
